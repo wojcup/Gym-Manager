@@ -2,12 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\ClassType;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ScheduledClass extends Model
 {
     use HasFactory;
+    protected $guareded = null;
+    protected $fillable = ['class_type_id','date_time','instructor_id'];
+    protected $casts = [
+        'date_time' => 'datetime'
+    ];
 
 
     public function instructor(){
@@ -16,6 +22,6 @@ class ScheduledClass extends Model
 
 
     public function classType(){
-        return $this->belongsTo(classType::class);
+        return $this->belongsTo(ClassType::class);
     }
 }
