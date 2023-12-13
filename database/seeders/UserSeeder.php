@@ -14,27 +14,25 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // a fixed user:
+        ## a fixed user:
         User::factory()->create([
             'name' => 'wojcup@email.com',
             'email' => 'fixed@email.com',
         ]);
 
-        // a fixed user:
+        ## a fixed user with type of instructor:
         User::factory()->create([
             'name' => 'Instructor A',
             'email' => 'wojcup+instructor1@email.com',
             'role' => 'instructor',
         ]);
 
-        // a fixed user:
         User::factory()->create([
             'name' => 'Instructor B',
             'email' => 'wojcup+instructor2@email.com',
             'role' => 'instructor',
         ]);
 
-        // a fixed user:
         User::factory()->create([
             'name' => 'Admin A',
             'email' => 'wojcup+admin1@email.com',
@@ -48,8 +46,7 @@ class UserSeeder extends Seeder
             'role' => 'instructor'
         ]);
 
-
-        // DB::table('users')->insert(['name'=>'User Name', 'email' => 'user@email.com', 'role' => 'member']);
-        
+        ## Conventional way:
+        ## DB::table('users')->insert(['name'=>'User Name', 'email' => 'user@email.com', 'role' => 'member']);
     }
 }
