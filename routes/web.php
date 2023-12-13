@@ -34,14 +34,6 @@ Route::resource('/instructor/schedule',ScheduledClassController::class)
     ->middleware(['auth','role:instructor']);
 
 
-// Route::get('/member/dashboard', function () {
-//     return view('member.dashboard');
-// })->middleware(['auth','role:member'])->name('member.dashboard');
-
-
-// Route::get('/member/book', [BookingController::class, 'create'])
-//     ->middleware(['auth','role:member'])->name('member.dashboard');
-
 /* 
 *   Member routes 
 */
