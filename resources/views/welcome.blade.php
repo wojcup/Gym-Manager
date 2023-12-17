@@ -6,7 +6,7 @@
 
         <title>{{ config('app.name') }}</title>
 
-        @vite( ['resources/css/app.css', 'resources/js/app.js', 'resources/js/bootstrap.js' ] );
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/bootstrap.js'])
 
     </head>
     <body class="antialiased">
